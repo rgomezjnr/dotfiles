@@ -1,0 +1,9 @@
+session-buddy-export
+powershell -command &{node D:\Work\session-buddy-export\session-buddy-export.js > D:\backups\session-buddy\session-buddy-export-$(Get-Date -Format "yyyyMMdd-HHmm").html}
+spotify-backup
+powershell -command &{python D:\Work\spotify-backup\spotify-backup.py D:\backups\spotify\spotify-liked-songs-$(Get-Date -Format "yyyyMMdd-HHmm").txt --scope user-library-read}
+powershell -command &{python D:\Work\spotify-backup\spotify-backup.py D:\backups\spotify\spotify-playlists-$(Get-Date -Format "yyyyMMdd-HHmm").txt}
+backup
+rsync -av /cygdrive/e/ /cygdrive/g/e-stage/
+rsync -av /cygdrive/d/ /cygdrive/g/d-stash/
+rsync -av /cygdrive/c/Users/ /cygdrive/g/c-system/Users/

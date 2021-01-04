@@ -1,0 +1,27 @@
+[include]
+    path = .gitconfig-priv
+[merge]
+    tool = vimdiff
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+[alias]
+    unpushed = log --branches --not --remotes
+    st = status
+    gr = log --graph --decorate --abbrev-commit --pretty=oneline --all
+    co = checkout
+    br = branch
+    ct = commit
+    df = diff
+    last = log -1 HEAD
+    alias = config --get-regexp alias
+    tree = ls-tree -r --full-tree HEAD
+    unchanged = update-index --assume-unchanged
+    changed = update-index --no-assume-unchanged
+    ls = ls-files -v
+    conf = config --list
+[core]
+    excludesfile = ~/.gitignore_global
+    pager = less -S
+    editor = vi
