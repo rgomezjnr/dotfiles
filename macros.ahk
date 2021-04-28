@@ -17,3 +17,8 @@ Return
 RAlt & e::
 SendInput %EMAIL%
 Return
+
+#if WinActive("ahk_exe typora.exe")
+Enter::send +{Enter}
++Enter::send {Enter}
+#if
