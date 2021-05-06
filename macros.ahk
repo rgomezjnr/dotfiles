@@ -6,7 +6,7 @@ SetWorkingDir %A_ScriptDir%         ; Ensures a consistent starting directory.
 #Include macros-priv.ahk
 
 RAlt & t::
-FormatTime, TimeString,, %A_now%
+FormatTime, TimeString,, yyyyMMdd-HHmmss
 SendInput, %TimeString%
 Return
 
