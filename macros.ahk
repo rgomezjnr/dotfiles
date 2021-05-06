@@ -10,6 +10,16 @@ FormatTime, TimeString,, %A_now%
 SendInput, %TimeString%
 Return
 
+RAlt & d::
+Tomorrow := A_Now
+Tomorrow += 1, Days
+FormatTime, DateEntry, %Tomorrow%, dddd M/d/y
+SendInput, {#}{#} %DateEntry%{Enter}
+SendInput, {#}{#}{#} Plan{Enter}
+SendInput, {#}{#}{#} Execute{Enter}
+SendInput, {#}{#}{#} Review{Enter}
+Return
+
 RAlt & c::
 SendInput {U+2713}
 Return
