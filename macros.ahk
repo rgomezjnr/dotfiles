@@ -21,7 +21,11 @@ SendInput, {#}{#}{#} Review{Enter}
 Return
 
 RAlt & c::
-SendInput {U+2713}
+SendInput {U+2705}
+Return
+
+RAlt & x::
+SendInput {U+274C}
 Return
 
 RAlt & e::
