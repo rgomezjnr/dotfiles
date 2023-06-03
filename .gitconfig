@@ -14,6 +14,8 @@
     br = branch
     ct = commit
     df = diff
+    dfc = diff --cached
+    diffc = diff --cached
     last = log -1 HEAD
     alias = config --get-regexp alias
     tree = ls-tree -r --full-tree HEAD
@@ -21,7 +23,9 @@
     changed = update-index --no-assume-unchanged
     ls = ls-files -v
     conf = config --list
+    resethh = reset HEAD --hard
 [core]
     excludesfile = ~/.gitignore_global
     pager = less -S
     editor = vi
+
