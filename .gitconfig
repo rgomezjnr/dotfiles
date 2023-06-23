@@ -26,6 +26,6 @@
     resethh = reset HEAD --hard
 [core]
     excludesfile = ~/.gitignore_global
-    pager = less -S
+    pager = less -X -F
     editor = vi
 
