@@ -1,0 +1,9 @@
+{
+    "window.zoomLevel": 1,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "trailing",
+    "editor.cursorStyle": "block",
+    "[typescript]": {
+       "editor.tabSize": 2 
+    }
+}
