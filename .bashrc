@@ -7,6 +7,7 @@ alias ll='ls -lh'
 alias lal='ls -alh'
 alias ls='ls --color=auto'
 alias view='vim -R'
+alias clr='clear'
 
 set -o vi
 export EDITOR="vim"
