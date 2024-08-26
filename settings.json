@@ -1,0 +1,11 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "editor.cursorStyle": "block",
+    "editor.minimap.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "editor.renderWhitespace": "trailing",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.rulers": [
+        100
+    ]
+}
