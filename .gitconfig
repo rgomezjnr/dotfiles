@@ -8,12 +8,17 @@
     status = auto
 [alias]
     unpushed = log --branches --not --remotes
-    st = status
-    gr = log --graph --decorate --abbrev-commit --pretty=oneline --all
+    s = status
+    g = log --graph --decorate --abbrev-commit --pretty=oneline --all
     co = checkout
-    br = branch
-    ct = commit
-    df = diff
+    a = add
+    b = branch
+    c = commit
+    d = diff
+    sl = stash list
+    ss = stash save
+    sp = stash pop
+    sd = stash drop
     last = log -1 HEAD
     alias = config --get-regexp alias
     tree = ls-tree -r --full-tree HEAD
@@ -21,6 +26,7 @@
     changed = update-index --no-assume-unchanged
     ls = ls-files -v
     conf = config --list
+    resethh = reset HEAD --hard
 [core]
     excludesfile = ~/.gitignore_global
     pager = less -S
