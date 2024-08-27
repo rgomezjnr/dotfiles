@@ -40,7 +40,6 @@ alias bulboff='wizcon -si 11 ${BULB_IP} OFF'
 alias bulbhalf='wizcon -b 100 ${BULB_IP} ON'
 alias bulbcozy='wizcon -si 6 ${BULB_IP} ON'
 alias dlpl='spotify_dl --no-overwrites --multi_core 8 --url $1'
-alias code='codium'
 alias cheat=$'
     echo "CHEAT SHEET"
     echo "==========="
@@ -65,6 +64,19 @@ alias cheat=$'
     echo
     echo "GIT"
     git alias
+    echo
+    echo "BROWSER"
+    echo "SEARCH ENGINES"
+    echo "AlternativeTo - at"
+    echo "Arch Packages - ap"
+    echo "Arch Wiki     - arch"
+    echo "AUR           - aur"
+    echo "Bookmarks     - @bookmarks"
+    echo "Gemini        - @gemini"
+    echo "GitHub        - gh"
+    echo "Gist          - gist"
+    echo "History       - @history"
+    echo "Tabs          - @tabs"
     echo'
 #    echo "Fn + W - previous track"
 #    echo "Fn + E - next track"
