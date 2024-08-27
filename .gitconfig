@@ -15,6 +15,9 @@
     b = branch
     c = commit
     d = diff
+    dc = diff --cached
+    m = merge
+    sa = stash apply
     sl = stash list
     ss = stash save
     sp = stash pop
@@ -23,10 +26,13 @@
     alias = config --get-regexp alias
     tree = ls-tree -r --full-tree HEAD
     unchanged = update-index --assume-unchanged
+    uc = update-index --assume-unchanged
     changed = update-index --no-assume-unchanged
+    ch = update-index --no-assume-unchanged
     ls = ls-files -v
     conf = config --list
     resethh = reset HEAD --hard
+    pushu = push --set-upstream
 [core]
     excludesfile = ~/.gitignore_global
     pager = less -S
