@@ -37,4 +37,6 @@
     excludesfile = ~/.gitignore_global
     pager = less -X -F
     editor = vi
+[pull]
+	rebase = false
 
