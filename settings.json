@@ -1,11 +1,17 @@
 {
     "workbench.colorTheme": "Default Dark+",
+    "window.menuBarVisibility": "toggle",
     "editor.cursorStyle": "block",
     "editor.minimap.enabled": false,
-    "window.menuBarVisibility": "toggle",
     "editor.renderWhitespace": "trailing",
     "editor.wordWrap": "wordWrapColumn",
+    "terminal.integrated.cursorBlinking": true,
+    "files.insertFinalNewline": true,
     "editor.rulers": [
         100
-    ]
+    ],
+    "[typescript]": {
+       "editor.tabSize": 2
+    }
 }
+

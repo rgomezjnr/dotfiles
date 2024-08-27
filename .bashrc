@@ -40,6 +40,7 @@ alias bulboff='wizcon -si 11 ${BULB_IP} OFF'
 alias bulbhalf='wizcon -b 100 ${BULB_IP} ON'
 alias bulbcozy='wizcon -si 6 ${BULB_IP} ON'
 alias dlpl='spotify_dl --no-overwrites --multi_core 8 --url $1'
+alias code='codium'
 alias cheat=$'
     echo "CHEAT SHEET"
     echo "==========="
