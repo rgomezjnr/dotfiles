@@ -10,6 +10,8 @@ if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
     exec startx
 fi
 
+eval "$(ssh-agent -s)"
+
 set -o vi
 
 PS1="\[$(tput sgr0)\][\[$(tput setaf 2)\]\u\[$(tput sgr0)\]@\[$(tput setaf 13)\]\h \[$(tput bold)\]\[$(tput setaf 4)\]\w\[$(tput sgr0)\]\[$(tput sgr0)\]]\\$ \[$(tput sgr0)\]"
