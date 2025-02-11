@@ -72,7 +72,7 @@ export COLOR_WHITE="$(tput setaf 15)"
 export COLOR_HEADER="${COLOR_YELLOW}"
 export COLOR_SUB_HEADER="${COLOR_LIGHT_CYAN}"
 
-alias cheat=$'
+cheat() {
     echo
     echo "${COLOR_RED}CHEAT SHEET${COLOR_NO_COLOR}"
     echo "${COLOR_NO_COLOR}===========${COLOR_NO_COLOR}"
@@ -124,7 +124,8 @@ alias cheat=$'
     echo "TradingView   - tv"
     echo "Twitter       - t"
     echo "X             - x"
-    echo'
+    echo
+}
 #    echo "Fn + W - previous track"
 #    echo "Fn + E - next track"
 #    echo "Fn + R - play/pause"
