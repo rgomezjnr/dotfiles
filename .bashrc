@@ -73,6 +73,7 @@ export COLOR_HEADER="${COLOR_YELLOW}"
 export COLOR_SUB_HEADER="${COLOR_LIGHT_CYAN}"
 
 alias cheat=$'
+    echo
     echo "${COLOR_RED}CHEAT SHEET${COLOR_NO_COLOR}"
     echo "${COLOR_NO_COLOR}===========${COLOR_NO_COLOR}"
     echo "${COLOR_HEADER}ALIAS${COLOR_NO_COLOR}"
