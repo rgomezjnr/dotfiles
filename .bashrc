@@ -120,6 +120,8 @@ cheat() {
     echo "Grok          - grok"
     echo "History       - @history"
     echo "Instagram     - i"
+    echo "npm           - npm"
+    echo "PyPI          - pypi"
     echo "Tabs          - @tabs"
     echo "TradingView   - tv"
     echo "Twitter       - t"
