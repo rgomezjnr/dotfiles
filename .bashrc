@@ -43,8 +43,11 @@ alias rs='redshift -x'
 alias rsclr='redshift -x'
 alias rsoff='redshift -x'
 alias rson='redshift -PO 4000'
-alias rslower='redshift -PO 3000'
-alias rslow='redshift -PO 3500'
+alias rsl='redshift -PO 3750'
+alias rslow='redshift -PO 3750'
+alias rslower='redshift -PO 3500'
+alias rslowr='redshift -PO 3500'
+alias rslowest='redshift -PO 3000'
 alias rshigh='redshift -PO 4000'
 alias rsauto='redshift -Po'
 alias dlpl='spotify_dl --no-overwrites --multi_core 8 --url $1'
@@ -120,7 +123,10 @@ cheat() {
     echo "Grok          - grok"
     echo "History       - @history"
     echo "Instagram     - i"
+    echo "nostr         - nostr"
     echo "npm           - npm"
+    echo "pip           - pip"
+    echo "Primal        - p"
     echo "PyPI          - pypi"
     echo "Tabs          - @tabs"
     echo "TradingView   - tv"
