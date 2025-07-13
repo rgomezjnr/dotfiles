@@ -10,7 +10,24 @@ if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
     exec startx
 fi
 
-eval "$(ssh-agent -s)"
+# Setup ssh-agent
+if [ ! -S $HOME/.ssh/ssh_auth_sock ]; then
+  eval $(ssh-agent)
+  ln -sf "$SSH_AUTH_SOCK" $HOME/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=$HOME/.ssh/ssh_auth_sock
+ssh-add -l > /dev/null || ssh-add $HOME/.ssh/id_ed25519
+if [ $? -ne 0 ]; then
+  eval $(ssh-agent)
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+  ssh-add ~/.ssh/id_ed25519
+fi
+
+# Doesn't seem necessary when using above
+## Forward ssh-agent e.g. when using ForwardAgent yes in ~/.ssh/config
+#if [[ -z "${SSH_CONNECTION}" ]]; then
+#    export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+#fi
 
 set -o vi
 
@@ -27,6 +44,11 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
+export PATH="$HOME/python/bin:$PATH"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+export XDG_SESSION_TYPE="x11"
+#Fix for using updated fastboot 35 from android-tools instead of fastboot 33 from android-sdk-platform-toolsAUR?
+#export PATH="/usr/bin:$PATH"
 
 alias la='ls -a'
 alias ll='ls -lh'
@@ -43,17 +65,17 @@ alias rs='redshift -x'
 alias rsclr='redshift -x'
 alias rsoff='redshift -x'
 alias rson='redshift -PO 4000'
+alias rshigh='redshift -PO 4000'
 alias rsl='redshift -PO 3750'
 alias rslow='redshift -PO 3750'
 alias rslower='redshift -PO 3500'
 alias rslowr='redshift -PO 3500'
 alias rslowest='redshift -PO 3000'
-alias rshigh='redshift -PO 4000'
 alias rsauto='redshift -Po'
 alias dlpl='spotify_dl --no-overwrites --multi_core 8 --url $1'
 alias code='codium'
-alias monoff='xset -dpms'
-#alias monoff='xset s off && xset -dpms'
+#alias monoff='xset -dpms'
+alias monoff='xset s off && xset -dpms'
 
 export COLOR_NO_COLOR="$(tput sgr0)"
 export COLOR_BLACK="$(tput setaf 0)"
@@ -133,6 +155,9 @@ cheat() {
     echo "Twitter       - t"
     echo "X             - x"
     echo
+
+    echo "${COLOR_HEADER}MARKDOWN${COLOR_NO_COLOR}"
+    echo "Highlight - ==abc=="
 }
 #    echo "Fn + W - previous track"
 #    echo "Fn + E - next track"
