@@ -29,6 +29,11 @@ fi
 #    export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 #fi
 
+# Start plank docks
+# DOESN'T WORK
+#plank -n dock1 > /dev/null 2>&1 &
+#plank -n dock2 > /dev/null 2>&1 &
+
 set -o vi
 
 PS1="\[$(tput sgr0)\][\[$(tput setaf 2)\]\u\[$(tput sgr0)\]@\[$(tput setaf 13)\]\h \[$(tput bold)\]\[$(tput setaf 4)\]\w\[$(tput sgr0)\]\[$(tput sgr0)\]]\\$ \[$(tput sgr0)\]"
@@ -74,8 +79,14 @@ alias rslowest='redshift -PO 3000'
 alias rsauto='redshift -Po'
 alias dlpl='spotify_dl --no-overwrites --multi_core 8 --url $1'
 alias code='codium'
-#alias monoff='xset -dpms'
-alias monoff='xset s off && xset -dpms'
+alias monoff='xset dpms force off'
+alias plank1='plank -n dock1 > /dev/null 2>&1 &'
+alias plank2='plank -n dock2 > /dev/null 2>&1 &'
+alias dock1='plank -n dock1 > /dev/null 2>&1 &'
+alias dock2='plank -n dock2 > /dev/null 2>&1 &'
+alias reflect='sudo reflector --country US --latest 10 --sort rate --save /etc/pacman.d/mirrorlist'
+alias ff='fastfetch'
+alias about='fastfetch'
 
 export COLOR_NO_COLOR="$(tput sgr0)"
 export COLOR_BLACK="$(tput setaf 0)"
@@ -105,11 +116,25 @@ cheat() {
     alias | sed "s/^alias/ ${COLOR_CYAN}&${COLOR_NO_COLOR}/" # Colorize "alias" keyword
     echo
 
+    echo "${COLOR_HEADER}COMMANDS${COLOR_NO_COLOR}"
+    echo "command | xclip - Copy command output to clipboard"
+    echo
+
     echo "${COLOR_HEADER}POK3R${COLOR_NO_COLOR}"
     echo "Fn + E - email"
     echo "Fn + S - volume decrease"
     echo "Fn + D - volume increase"
     echo "Fn + F - volume mute"
+    echo
+
+    echo "${COLOR_HEADER}KEYBOARD SHORTCUTS${COLOR_NO_COLOR}"
+    echo "Ctrl + Alt + E - emote"
+    echo
+
+    echo "${COLOR_HEADER}ARCH UPDATE${COLOR_NO_COLOR}"
+    echo "1. sudo grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB --locale-directory=/usr/share/locale/en_US --themes=none"
+    echo "2. sudo grub-mkconfig -o /boot/grub/grub.cfg"
+    echo "3. sudo mkinitcpio -P"
     echo
 
     echo "${COLOR_HEADER}ARCH AUR${COLOR_NO_COLOR}"
@@ -119,10 +144,6 @@ cheat() {
     echo "4. Acquire a PGP public key if needed"
     echo "5. makepkg -s"
     echo "6. pacman -U package_name_-_version_-_architecture_.pkg.tar.zst"
-    echo
-
-    echo "${COLOR_HEADER}KEYBOARD SHORTCUTS${COLOR_NO_COLOR}"
-    echo "Ctrl + Alt + E - emote"
     echo
 
     echo "${COLOR_HEADER}GIT${COLOR_NO_COLOR}"
