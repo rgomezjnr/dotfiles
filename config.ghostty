@@ -1,0 +1,17 @@
+theme = Afterglow
+background-opacity = 0.9
+background-blur = true
+cursor-style = block
+shell-integration-features = no-cursor
+font-size = 14
+#font-family = "Droid Sans Mono"
+#font-family = "Adwaita Mono"
+#font-family = "Hack"
+#font-family = "Liberation Mono"
+font-family = "Source Code Pro"
+bell-features = system
+#window-decoration = none
+#window-height = 1000
+#window-width = 100
+mouse-hide-while-typing = true
+
