@@ -1,4 +1,17 @@
 {
-  "theme": "dark",
-  "preferredNotifChannel": "notifications_disabled"
+  "model": "opus",
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "ffplay -nodisp -autoexit -loop 2 ~/Work/claude-bell/sounds/'Zelda - Notification.mp3'"
+          }
+        ]
+      }
+    ]
+  },
+  "effortLevel": "high",
+  "theme": "dark"
 }
