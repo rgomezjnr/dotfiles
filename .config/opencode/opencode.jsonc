@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "system",
+  "provider": {
+    "llama.cpp": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama.cpp",
+      "options": {
+        "baseURL": "http://127.0.0.1:8080"
+      },
+      "models": {
+        "Qwythos-9B-Claude-Mythos-5-1M-MTP-Q8_0": {
+          "name": "Qwythos-9B-Claude-Mythos-5-1M-MTP-Q8_0"
+        },
+        "gemma4-v2-Q6_K-12B-agentic-fable5-composer2.5-v2-3.5x-tau2": {
+          "name": "gemma4-v2-Q6_K-12B-agentic-fable5-composer2.5-v2-3.5x-tau2"
+        }
+      }
+    }
+  }
+}
+
